@@ -46,3 +46,53 @@ How could these problems have been prevented?
 
 Review the workflow on Bob & Carol & Ted & Alice and try to identify all of the individual things that they did wrong AND all of the things that they
 should have done but failed to do. Write up descriptions of those things and put those into the README of the repo.
+
+## Description of Errors
+
+Let's break down the problems that occurred in each scenario and discuss what each individual did wrong and what they should have done differently:
+
+### Scenario 1: Bob and Carol
+
+1. **Creating a Feature Branch without Pulling Main:**
+   - **What they did wrong:** Bob and Carol started a new feature branch without pulling the latest changes from the main branch.
+   - **What they should have done:** Before starting a new feature branch, they should have done a `git pull origin main` to ensure they have the latest changes.
+
+2. **Pull Request and Merge:**
+   - **What they did wrong:** They created a pull request and merged without waiting for Ted and Alice to review their changes.
+   - **What they should have done:** Wait for Ted and Alice to review and approve their changes before merging.
+
+### Scenario 2: Ted and Alice
+
+1. **Reviewing and Merging Without Updating Feature Branch:**
+   - **What they did wrong:** Ted and Alice reviewed and merged Bob and Carol's changes without updating their own feature branch.
+   - **What they should have done:** After merging changes from the pull request, they should have done a `git pull origin main` into their feature branch to stay in sync.
+
+### Scenario 3: Bob and Carol (Switched laptops)
+
+1. **Starting a New Feature Branch without Pulling Main:**
+   - **What they did wrong:** Bob and Carol switched to a new laptop, started a new feature branch, but did not pull the latest changes from the main branch.
+   - **What they should have done:** Before starting a new feature branch on the new laptop, they should have done a `git pull origin main` to get the latest changes.
+
+### Scenario 4: Ted and Alice (Switched laptops)
+
+1. **Merge Conflicts:**
+   - **What they did wrong:** Ted and Alice finished their feature without pulling the latest changes from the main branch, resulting in merge conflicts.
+   - **What they should have done:** Before finishing their feature, they should have done a `git pull origin main` to avoid merge conflicts.
+
+### General Learnings:
+
+1. **Always Pull Before Starting Work:**
+   - Team members should always pull the latest changes from the main branch before starting a new feature to avoid conflicts.
+
+2. **Review Before Merging:**
+   - Pull requests should be reviewed and approved by team members before merging to main to ensure the code quality and avoid conflicts.
+
+3. **Update Feature Branches:**
+   - After merging changes into main, team members should update their feature branches to avoid conflicts when continuing their work.
+
+4. **Communication is Key:**
+   - Team members should communicate effectively about their progress and make sure everyone is on the same page before merging changes.
+
+5. **Handle Merge Conflicts Promptly:**
+   - If merge conflicts occur, they should be addressed promptly by checking and editing the conflicting code.
+
